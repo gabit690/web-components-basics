@@ -5,7 +5,7 @@ class ShadowContainer extends HTMLElement {
     super();
 
     // Shadow DOM registration
-    this.attachShadow({ mode: "open" });
+    this._root = this.attachShadow({ mode: "closed" });
 
     this._template = document.getElementById('template-md-card');
 
@@ -14,17 +14,9 @@ class ShadowContainer extends HTMLElement {
 
   connectedCallback() {
 
-    this.shadowRoot.appendChild(this._shadowCard);
+    this._root.appendChild(this._shadowCard);
 
     console.log("Shadow card was rendered!!!");
-  }
-
-  attributeChangedCallback(attr, oldValue, newValue) {
-
-  }
-
-  static get observedAttributes() {
-    return [];
   }
 
 }
