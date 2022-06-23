@@ -4,7 +4,7 @@ class AppGreeting extends HTMLElement {
 
     super();
 
-    this._username = 'none';
+    this._username = '';
 
     this._isActive = false;
   }
