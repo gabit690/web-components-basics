@@ -5,23 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Components: Basics</title>
+    <link rel="stylesheet" href="src/index.css">
 </head>
 <body>
-    <h1>Web componentes practice</h1>
+    <h1 class="tittle">Web componentes practice</h1>
 
-    <template id="template-card">
-        <h2>Name</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptates ad veritatis quod, amet illo tenetur et delectus consequatur corporis sapiente a alias rem hic tempora inventore aperiam quibusdam aspernatur!</p>
+    <template id="template-sm-card">
+        <h2 class="tittle">Name</h2>
+        <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
     </template>
+
+    <app-greeting name="gabit"></app-greeting>
 
     <button id="show">Show Info</button>
 
-    <div id="main-box">
+    <div id="main-box"></div>
+    
+    <template id="template-md-card">
+        <link rel="stylesheet" href="src/shadow.css">
+        <h2 class="tittle"><slot name="tittle">Default title</slot></h2>
+        <p class="paragraph"><slot name="body">Body Content</slot></p>
+    </template>
 
-    </div>
+    <shadow-container>
+        <span slot="tittle">Medium Card</span>
+        <span slot="body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptates ad veritatis quod, amet illo tenetur et delectus consequatur corporis sapiente a alias rem hic tempora inventore aperiam quibusdam aspernatur!</span>
+    </shadow-container>
+
+    <script src="src/custom.js"></script>
 
     <script src="src/template.js"></script>
+    
+    <script src="src/shadow.js"></script>
 
-    <app-greeting name="gabit"></app-greeting>
 </body>
 </html>

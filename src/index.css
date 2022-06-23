@@ -1,0 +1,16 @@
+.tittle {
+  background-color: blue;
+  text-align: center;
+  color: white;
+}
+
+.tittle:not(h1) {
+  background-color: red;
+  margin-bottom: 0;
+}
+
+.paragraph {
+  margin-top:0;
+  padding: 10px 0px;
+  background-color: lightblue;
+}

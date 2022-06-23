@@ -1,0 +1,13 @@
+.tittle {
+  background-color: green;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+  padding: 10px 0px;
+}
+
+.paragraph {
+  margin-top:0;
+  padding: 10px 0px;
+  background-color: lightgray;
+}

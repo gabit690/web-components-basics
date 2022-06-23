@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   actionButton.addEventListener('click', () => {
 
-    const template = document.getElementById('template-card');
+    const template = document.getElementById('template-sm-card');
 
     const target = document.getElementById('main-box');
 
