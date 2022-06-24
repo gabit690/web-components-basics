@@ -8,37 +8,43 @@
     <link rel="stylesheet" href="src/index.css">
 </head>
 <body>
-    <h1 class="tittle">Web componentes practice</h1>
+    <h1 class="tittle">Web components</h1>
 
     <template id="template-sm-card">
-        <h2 class="tittle">Name</h2>
-        <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h2 class="tittle">DOM Card</h2>
+        <p class="paragraph">This card belongs to the main DOM.</p>
     </template>
 
-    <app-greeting name="gabit"></app-greeting>
+    <app-greeting name="USER"></app-greeting>
 
-    <button id="show" is="deactivatable-button">Show Info</button>
+    <button id="show" is="deactivatable-button" >Show DOM card</button>
 
     <div id="main-box"></div>
     
     <template id="template-md-card">
         <link rel="stylesheet" href="src/shadow.css">
-        <h2 class="tittle"><slot name="tittle">Default title</slot></h2>
-        <p class="paragraph"><slot name="body">Body Content</slot></p>
+        <div class="container">
+            <h2 class="tittle"><slot name="tittle">Default title</slot></h2>
+            <p class="paragraph"><slot name="body">Body Content</slot></p>
+        </div>
     </template>
 
     <shadow-container>
-        <span slot="tittle">Medium Card</span>
-        <span slot="body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptates ad veritatis quod, amet illo tenetur et delectus consequatur corporis sapiente a alias rem hic tempora inventore aperiam quibusdam aspernatur!</span>
+        <span slot="tittle">Shadow DOM Card</span>
+        <span slot="body">This card belongs to another DOM. Its styles and functionality don't depend of the main DOM.</span>
     </shadow-container>
 
-    <script src="src/custom.js"></script>
+    <app-copyright></app-copyright>
+
+    <script src="src/greeting.js"></script>
 
     <script src="src/template.js"></script>
     
     <script src="src/shadow.js"></script>
 
     <script src="src/deactivatableButton.js"></script>
+
+    <script src="src/copyright.js"></script>
 
 </body>
 </html>

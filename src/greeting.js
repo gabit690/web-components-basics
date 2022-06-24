@@ -13,11 +13,17 @@ class AppGreeting extends HTMLElement {
 
     this._isActive = true;
 
-    let bold = document.createElement('strong');
+    let subtitle = document.createElement('em');
 
-    bold.innerHTML = `Hello user ${this._username}. I happy to see you again.`
+    subtitle.style.display = 'block';
 
-    this.appendChild(bold);
+    subtitle.style.textAlign = 'center';
+
+    subtitle.style.padding = '10px 0px';
+
+    subtitle.innerHTML = `Hello ${this._username}. I happy to see you !!!`
+
+    this.appendChild(subtitle);
 
     console.log("Component was MOUNTED");
   }
@@ -36,7 +42,6 @@ class AppGreeting extends HTMLElement {
     if (attrChanged === "name") {
 
       this._username = newValue;
-
     }
   }
 

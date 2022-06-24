@@ -14,7 +14,7 @@ class ShadowContainer extends HTMLElement {
 
   connectedCallback() {
 
-    this._root.appendChild(this._shadowCard);
+    setTimeout(() => this._root.appendChild(this._shadowCard), 3000);
 
     console.log("Shadow card was rendered!!!");
   }
